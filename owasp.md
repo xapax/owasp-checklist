@@ -63,16 +63,32 @@ V - VULNERABLE
 
 [ ] - Test Network/Infrastructure Configuration (OTG-CONFIG-001)
 [ ] - Test Application Platform Configuration (OTG-CONFIG-002)
+    [ ] - Sample files, known files
+    [ ] - Comments (can be done in burp - right click target, engagement tools, comments)
 [ ] - Test File Extensions Handling for Sensitive Information (OTG-CONFIG-003)
+    [ ] - Forced browsing
+    [ ] - Search engine
 [ ] - Review Old, Backup and Unreferenced Files for Sensitive Information (OTG-CONFIG-004)
+    [ ] - Forced browsing
+    [ ] - Search engine
 [ ] - Enumerate Infrastructure and Application Admin Interfaces (OTG-CONFIG-005)
 [ ] - Test HTTP Methods (OTG-CONFIG-006)
+    Att göra det med SSL:
+    `printf 'OPTIONS / HTTP/1.1\r\nHost: www.example.org\r\n\r\n' | ncat --ssl www.example.org 443`
 [ ] - Test HTTP Strict Transport Security (OTG-CONFIG-007)
 [ ] - Test RIA cross domain policy (OTG-CONFIG-008)
+    - crossdomain.xml clientaccesspolicy.xml
 
 ### Identity Management Testing
 
 [ ] - Test role definitions (OTG-IDENT-001)
+
+
+        Role                | Permission    | Object            | Constraints
+        ---------------------------------------------------------------------
+        Administrator         Read          Customer record
+        Normal User           Read          Customer record       Only records related to business unit
+
 [ ] - Test User Registration Process (OTG-IDENT-002)
 [ ] - Test Account Provisioning Process (OTG-IDENT-003)
 [ ] - Testing for account Enumeration and Guessable User Account (OTG-IDENT-004)
