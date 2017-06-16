@@ -2,33 +2,9 @@
 
 
 
-#### Web-server fingerprinting
 
-Server:
-Language:
-Framework:
-
-Generic request header:
-
-```
-
-
-```
-
-Generic response header:
-
-```
-
-
-
-```
-
-
-#### A little bit of everything
+### A little bit of everything
 https://www.netcraft.com/
-robots.txt
-
-
 
 
 ## Map the Application's Content
@@ -132,8 +108,64 @@ N - NOT APPLICABLE
                 [ ] - Identify which token is the session identification
             [ ] - Test Tokens for Meaning
                 [ ] - Log in with several usernames and record the tokens recieved. Name the users stuff like A, AA, AAA, AAAAA, AAAAB
-                [ ] - ANalyze token for obfuscation or encoding (base64 etc)
-
+                [ ] - Analyze token for obfuscation or encoding (base64 etc)
+            [ ] - Test Tokens for Predictibility
+                [ ] - Generate and capture a large amount of session tokens
+                [ ] - Try to identify any patterns
+                [ ] - If the Session ID is custom-written, use the bit-flipper in burp.
+            [ ] - Check for Insecure Transmission of Tokens
+            [ ] - Check for Disclosure of Tokens in Logs
+            [ ] - Check Mapping of Tokens to Sessions
+            [ ] - Test Sessions Termination
+                [ ] - Check if session is terminated on the server side when a user logs out
+            [ ] - Check for session fixation
+                [ ] - Check if sessionID is set before user is authenticated
+                [ ] - If the sessionID is not set to authenticated users you can log in with one user, and then go to login-page again, and log in with another user. If no new session-token is issued it is vulnerable to session fixation.
+            [ ] - Check for CSRF
+                [ ] - If the app uses CSRF-tokens, test the robustness of those. Can you just use whatever?
+            [ ] - Check Cookie Scope
+### 6.0 [ ] - Test Access Controls
+            [ ] - Check vertical access control - identify admin functions and resources. Check if non-admin can access them.
+            [ ] - Check horizontal access control - try to reach resources from other user at same level.
+            [ ] - Test for Insecure Access Control Methods
+                [ ] - Look out for control methods like access=read, edit=false.
+                [ ] - Some access control is based on Referer. 
+                [ ] - HEAD - Container managed access control
+### 7.0 [ ] - Test for Input-Based Vulnerabilities
+            Start looking for injections by doing a basic first fuzzing. Analyze the outcome of it.
+            It is a good idea to use Burps fuzzing-list, but make sure to edit it before.
+            [ ] - Test for SQL Injection
+                [ ] - Test to submit single and double quotation-marks.
+            [ ] - Test for XSS and Other Response Injections
+                [ ] - Test for Reflected XSS
+                [ ] - Test for HTTP Header Injection
+                [ ] - Test for Open Redirection
+                [ ] - Test for Stored Attacks
+                [ ] - Test for OS Command Injection
+                [ ] - Test for Path Traversal
+                [ ] - Test for Script Injection
+                [ ] - Test for File Inclusion
+### 8.0 [ ] - Test for Function-Specific Input Vulnerabilities
+            Look at 
+            [ ] - Test for SMTP-injection            
+            [ ] - Test for Native Software Vulnerabilities
+                [ ] - Test for Buffer Overflows
+                [ ] - Test for Integer Vulnerabilities
+                [ ] - Test for Format String Vulnerabilities
+            [ ] - Test for SOAP Injection
+            [ ] - Test for LDAP Injection
+            [ ] - Test for XPath Injection
+            [ ] - Test for Back-End Request Injection
+            [ ] - Test for XXE Injection
+### 9.0 [ ] - Test for Logic Flaws
+            Identify the key attack surface
+            [ ] - Test Multistage Processes
+                Skip stages. Accessing one stage several times. Look for error messages and debug output.
+            [ ] - Test Handling of Incomplete Input
+            [ ] - Test Trust Boundaries
+            [ ] - Test Transaction Logic
+### 10.0 [ ] - Test for Shared Hosting Vulnerabilities
+            [ ] - 
 
 
 ### Configuration and Deployment Management Testing
