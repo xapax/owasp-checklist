@@ -165,7 +165,76 @@ N - NOT APPLICABLE
             [ ] - Test Trust Boundaries
             [ ] - Test Transaction Logic
 ### 10.0 [ ] - Test for Shared Hosting Vulnerabilities
-            [ ] - 
+            [ ] - Test Segregation in Shared Infrastructure
+            [ ] - Test Segregation Between ASP-Hosted Applications
+### 11.0 [ ] - Test for Application Server Vulnerabilities
+            [ ] - Perform a port-scan of machine to identify administrative interface
+                [ ] - If found, test default credentials.
+            [ ] - Test for Default Content
+                [ ] - Scan with Nikto
+                [ ] - Examine default content found
+            [ ] - Test for Dangerous HTTP Methods (OTG-CONFIG-006)
+                [ ] - Use OPTIONS-method to list HTTP Methods available on the server
+                [ ] - Try each reported method and confirm them
+            [ ] - Test for Proxy Functionality
+            [ ] - Test for Virtual Hosting Misconfiguration
+                [ ] - Send correct Host-header
+                [ ] - Bogus Host-header
+                [ ] - The servers ip-address in the host-header
+                [ ] - No Host-header (use HTTP/1.0 only)
+            [ ] - Test for Web Server Software Bugs
+                [ ] - Run Nessus or similar
+            [ ] - Test for Web Application Firewalling
+### 12.0 [ ] - Miscellaneous Checks
+            [ ] - Check for DOM-Based Attacks
+                [ ] - Code review of every piece of JS received.
+                [ ] - Identify the following APIs:
+                    document.location
+                    document.URL
+                    document.URLEncoded
+                    document.referrer
+                    window.location
+                [ ] - Identify if any of the input data to above mentioned APIs are passed through the following functions:
+                    document.write()
+                    document.writeln()
+                    document.body.innerHtml
+                    eval()
+                    window.execScript()
+                    window.setInterval()
+                    window.setTimeout()
+                [ ] If the input data is passed through to any of the following functions it might be vulnerable to redirection attack:
+                    document.location
+                    document.URL
+                    document.open()
+                    window.location.href
+                    window.navigate()
+                    window.open()
+            [ ] - Check for Local Privacy Vulnerabilities
+                [ ] - Check when cookies expire, if it is in the future the session will be alive until it expires.
+            [ ] - Check for presence of Headers:
+                [ ] - Expires
+                [ ] - Cache-control: no-cache
+                [ ] - Pragma
+                [ ] - HSTS
+            [ ] - Check for Weak SSL Cipher
+            [ ] - Check Same-Origin Policy Configuration
+                [ ] - Check for /crossdomain.xml
+                [ ] - Check /clientaccesspolicy.xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Configuration and Deployment Management Testing
