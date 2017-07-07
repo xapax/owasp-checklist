@@ -490,6 +490,10 @@ Do active scanning in Burp
 
 https://www.netcraft.com/
 
+http://pentestmonkey.net/
+
+http://sqlzoo.net
+
 ## Structure
 
 ~~~
