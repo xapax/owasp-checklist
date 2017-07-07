@@ -1,31 +1,11 @@
-# A little bit of everything
+# Intro
 
-https://www.netcraft.com/
-
-## Map the Application's Content
-
+Legend
 ~~~
 X - NOT VULNERABLE
 V - VULNERABLE
 N - NOT APPLICABLE
 - - NOT TESTED
-~~~
-
-## Structure
-
-~~~
-# Goal
-
-id: goalID
-
-* [ ] Taskname
-
-Description
-
-# Another Goal
-
-* [ ] Another Taskname
-
 ~~~
 
 # RECON
@@ -73,6 +53,12 @@ id: 1.3
 * [ ] Review comments and other client side code to find hidden content
 
 Use burp extension t.ex.
+
+## Discover DNS
+
+* [ ] Reverse DNS lookup
+* [ ] Brute force DNS (recon-ng, recon/domain-hosts/brute-hosts, set source, show hosts)
+* [ ] Zone-transfer test (fierce -dns target.com)
 
 ## Discover Default Content
 
@@ -499,5 +485,28 @@ Do active scanning in Burp
 * [ ] Testing WebSockets (OTG-CLIENT-010)
 * [ ] Test Web Messaging (OTG-CLIENT-011)
 * [ ] Test Local Storage (OTG-CLI
+
+# A little bit of everything
+
+https://www.netcraft.com/
+
+## Structure
+
+~~~
+# Goal
+
+id: goalID
+
+* [ ] Taskname
+
+Description
+
+# Another Goal
+
+* [ ] Another Taskname
+
+~~~
+
+
 
 ## Notes
