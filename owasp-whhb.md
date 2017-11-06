@@ -24,10 +24,10 @@ id: 1.2
 
 ~~~ 
 site:target.com
-e:target.com filetype:7z OR filetype:bin OR filetype:bzip2 OR
-filetype:egg OR filetype:gzip OR filetype:rar OR filetype:zip OR
-filetype:iso OR filetype:dat OR filetype:db OR filetype:sql OR
-filetype:indd OR filetype:psd OR filetype:asc OR filetype:csv OR
+site:target.com filetype:7z OR filetype:bin OR filetype:bzip2 OR 
+filetype:egg OR filetype:gzip OR filetype:rar OR filetype:zip OR 
+filetype:iso OR filetype:dat OR filetype:db OR filetype:sql OR 
+filetype:indd OR filetype:psd OR filetype:asc OR filetype:csv OR 
 filetype:docx OR filetype:doc OR filetype:epub
     
 Google begränsar antalet ord i en sökning så queryn måste delas upp på två
