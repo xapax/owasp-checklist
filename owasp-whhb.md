@@ -23,15 +23,15 @@ id: 1.2
 * [ ] Google
 
 ~~~ 
-site:target.com
-e:target.com filetype:7z OR filetype:bin OR filetype:bzip2 OR
-filetype:egg OR filetype:gzip OR filetype:rar OR filetype:zip OR
-filetype:iso OR filetype:dat OR filetype:db OR filetype:sql OR
-filetype:indd OR filetype:psd OR filetype:asc OR filetype:csv OR
-filetype:docx OR filetype:doc OR filetype:epub
+
+site:target.com filetype:7z OR filetype:bin OR filetype:bzip2 OR 
+filetype:egg OR filetype:gzip OR filetype:rar OR filetype:zip OR 
+filetype:iso OR filetype:dat OR filetype:db OR filetype:sql OR 
+filetype:indd OR filetype:psd OR filetype:asc OR filetype:csv OR 
+filetype:docx OR filetype:doc OR filetype:epub 
     
-Google begränsar antalet ord i en sökning så queryn måste delas upp på två
-e:target.com filetype:html OR filetype:htm OR filetype:gdoc OR
+Google limit the number of letters in a query so we need to divide it up in several chunks
+site:target.com filetype:html OR filetype:htm OR filetype:gdoc OR
 filetype:log OR filetype:md OR filetype:odt OR filetype:rtf OR
 filetype:odf OR filetype:php OR filetype:ods OR filetype:xls OR
 filetype:xlsx OR filetype:conf OR filetype:cnf OR filetype:cfg OR
@@ -353,7 +353,8 @@ id: 11.0
 # Miscellaneous Checks
 
 id: 12.0
-
+* [ ] Information disclose / Stack trace
+* [ ] Leaking sensitive information in referer header
 * [ ] Check for DOM-Based Attacks
 * [ ] Code review of every piece of JS received.
 * [ ] Identify the following APIs:
