@@ -42,9 +42,11 @@ site:target.com filetype:java OR filetype:bak OR filetype:old OR
 filetype:tar OR filetype:rar OR filetype:tgz OR filetype:gz
 ~~~
 
-* [ ] Other stuff
+* [ ] https://web.archive.org/
+* [ ] https://yahoo.com
+* [ ] https://bing.com
+* [ ] https://netcraft.com/
 
-Bing, Yahoo, Wayback
 
 ## Discover Hidden Content (use burp)
 
@@ -397,8 +399,6 @@ id: 12.0
 
 
 # A little bit of everything
-
-https://www.netcraft.com/
 
 http://pentestmonkey.net/
 
