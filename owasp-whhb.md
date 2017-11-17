@@ -145,13 +145,13 @@ id: 4.0
 ## Test Login Mechanism
 * [ ] Test for Logic Flaws
 * [ ] Test for Fail-Open Conditions
-* [ ] Test to submit empty string as the value
-* [ ] Remove the name/value pair
-* [ ] Submit very long and very short values
-* [ ] Submit strings instead of numbers, and vice versa
-* [ ] Submit the same named parameter multiple times, with the same and different values
+    * [ ] Test to submit empty string as the value
+    * [ ] Remove the name/value pair
+    * [ ] Submit very long and very short values
+    * [ ] Submit strings instead of numbers, and vice versa
+    * [ ] Submit the same named parameter multiple times, with the same and different values
 * [ ] Test any Multistage Mechanisms
-* [ ] Proceed through all stages but in different sequence
+    * [ ] Proceed through all stages but in different sequence
 * [ ] Test Resilience to Password Guessing - Lock-out mechanism
 * [ ] Test Any Impersionation Function
 * [ ] Test for Username Enumeration
@@ -168,12 +168,9 @@ id: 4.0
 * [ ] Check for Unsafe Distribution of Credentials (Send over email)
 * [ ] If application use activation-email with URL test how the URLs are created.
 * [ ] Test for Insecure Storage
-* [ ] Testing for Weak password policy (OTG-AUTHN-007)
 * [ ] Testing for Weak security question/answer (OTG-AUTHN-008)
 
 ## Other Tests
-* [ ] Test Any Account Recovery Function
-* [ ] Check Password Hint, email etc
 * [ ] Test Any Remember Me/Password Function
 * [ ] Testing for Browser cache weakness (OTG-AUTHN-006)
 * [ ] Testing for weak password change or reset functionalities (OTG-AUTHN-009)
