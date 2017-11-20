@@ -1,12 +1,12 @@
 # Intro
 
 Legend
-~~~
+```
 X - NOT VULNERABLE
 V - VULNERABLE
 N - NOT APPLICABLE
 - - NOT TESTED
-~~~
+```
 
 # RECON
 
@@ -357,15 +357,15 @@ id: 12.0
 * [ ] Check for DOM-Based Attacks
 * [ ] Code review of every piece of JS received.
 * [ ] Identify the following APIs:
-  ~~~
+  ```
   document.location
   document.URL
   document.URLEncoded
   document.referrer
   window.location
-  ~~~
+  ```
 * [ ] Identify if any of the input data to above mentioned APIs are passed through the following functions:
-  ~~~
+  ```
   document.write()
   document.writeln()
   document.body.innerHtml
@@ -373,16 +373,16 @@ id: 12.0
   window.execScript()
   window.setInterval()
   window.setTimeout()
-  ~~~
+  ```
 * [ ] If the input data is passed through to any of the following functions it might be vulnerable to redirection attack:
-  ~~~
+  ```
   document.location
   document.URL
   document.open()
   window.location.href
   window.navigate()
   window.open()
-  ~~~
+  ```
 * [ ] Check for Local Privacy Vulnerabilities
 * [ ] Check when cookies expire, if it is in the future the session will be alive until it expires.
 * [ ] Check for presence of Headers:
