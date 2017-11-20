@@ -22,7 +22,7 @@ id: 1.2
 
 * [ ] Google
 
-~~~ 
+``` 
 
 site:target.com filetype:7z OR filetype:bin OR filetype:bzip2 OR 
 filetype:egg OR filetype:gzip OR filetype:rar OR filetype:zip OR 
@@ -40,7 +40,7 @@ filetype:txt
     
 site:target.com filetype:java OR filetype:bak OR filetype:old OR
 filetype:tar OR filetype:rar OR filetype:tgz OR filetype:gz
-~~~
+```
 
 * [ ] https://web.archive.org/
 * [ ] https://yahoo.com
@@ -201,7 +201,7 @@ Is the session managed though cookie, query id, or some hidden form?
 
 ## Test for Session Fixation (OTG-SESS-003)
 * [ ] Check if sessionID is set before user is authenticated
-  If the sessionID is not set to authenticated users you can log in with one user, and then go to login-page again, and log in with another user. If no new session-token is issued it is vulnerable to session fixation.
+  If the sessionID is not set to authenticated users you can log in with one user, and then go to login-page again, andtv log in with another user. If no new session-token is issued it is vulnerable to session fixation.
 
 ## Test for CSRF (OTG-SESS-005)
 * [ ] If the app uses CSRF-tokens, test the robustness of those. Can you just use whatever?
@@ -252,8 +252,9 @@ It is a good idea to use Burps fuzzing-list, but make sure to edit it before.
 # Testing for weak Cryptography
 
 * [ ] Testing for Weak SSL/TLS Ciphers, Insufficient Transport Layer Protection (OTG-CRYPST-001)
-* * [ ] Bitar:
-* * [ ] Issuer:
+    * [ ] RSA Public Key bits:
+    * [ ] Issuer:
+    * [ ] Signature Algorithm: 
 * [ ] Testing for Padding Oracle (OTG-CRYPST-002)
 * [ ] Testing for Sensitive information sent via unencrypted channels (OTG-CRYPST-003)
 
@@ -335,14 +336,14 @@ id: 11.0
 * [ ] Scan with Nikto
 * [ ] Examine default content found
 * [ ] Test for Dangerous HTTP Methods (OTG-CONFIG-006)
-* [ ] Use OPTIONS-method to list HTTP Methods available on the server
-* [ ] Try each reported method and confirm them
-* [ ] Test for Proxy Functionality
-* [ ] Test for Virtual Hosting Misconfiguration
-* [ ] Send correct Host-header
-* [ ] Bogus Host-header
-* [ ] The servers ip-address in the host-header
-* [ ] No Host-header (use HTTP/1.0 only)
+    * [ ] Use OPTIONS-method to list HTTP Methods available on the server
+    * [ ] Try each reported method and confirm them
+    * [ ] Test for Proxy Functionality
+    * [ ] Test for Virtual Hosting Misconfiguration
+    * [ ] Send correct Host-header
+    * [ ] Bogus Host-header
+    * [ ] The servers ip-address in the host-header
+    * [ ] No Host-header (use HTTP/1.0 only)
 * [ ] Test for Web Server Software Bugs
 * [ ] Run Nessus or similar
 * [ ] Test for Web Application Firewalling
@@ -357,15 +358,15 @@ id: 12.0
 * [ ] Check for DOM-Based Attacks
 * [ ] Code review of every piece of JS received.
 * [ ] Identify the following APIs:
-  ```
+  ~~~
   document.location
   document.URL
   document.URLEncoded
   document.referrer
   window.location
-  ```
+  ~~~
 * [ ] Identify if any of the input data to above mentioned APIs are passed through the following functions:
-  ```
+  ~~~
   document.write()
   document.writeln()
   document.body.innerHtml
@@ -373,16 +374,16 @@ id: 12.0
   window.execScript()
   window.setInterval()
   window.setTimeout()
-  ```
+  ~~~
 * [ ] If the input data is passed through to any of the following functions it might be vulnerable to redirection attack:
-  ```
+  ~~~
   document.location
   document.URL
   document.open()
   window.location.href
   window.navigate()
   window.open()
-  ```
+  ~~~
 * [ ] Check for Local Privacy Vulnerabilities
 * [ ] Check when cookies expire, if it is in the future the session will be alive until it expires.
 * [ ] Check for presence of Headers:
