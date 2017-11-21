@@ -61,7 +61,10 @@ id: 1.3
 * [ ] Sample files, known files
 * [ ] Backups, git, other 
 * * [ ] .git
-
+* * [ ] .gitignore
+* * [ ] .git/description
+* * [ ] .git/HEAD
+* * [ ] .git/config
 
 Use burp extension t.ex.
 
