@@ -89,12 +89,12 @@ id: 1.5
 
 Use cluster-bomb attack in Burp
 
-~~~
+```
 debug       true
 test        yes
 hide        1
 source      on
-~~~
+```
 
 ----------------------------------------------------------------------------
 
@@ -113,6 +113,7 @@ POST, GET, WS?
 
 * [ ] Identify the Technologies Used
 * [ ] Client side (cookies, scripts, java applets, flash)
+* [ ] Code review of every piece of JS received.
 * [ ] Server side (server, scripting lang, platform, backend components)
 * [ ] Map the Attack Surface
 * [ ] Acertain likely internal structure
@@ -121,7 +122,16 @@ POST, GET, WS?
 
 ----------------------------------------------------------------------------
 
-# Test Client-Side Controls
+# Basic tests
+
+* [ ] Check Same-Origin Policy Configuration
+* [ ] Check for presence of Headers:
+  Expires, Cache-control: no-cache, Pragma, HSTS
+* [ ] Check for /crossdomain.xml
+* [ ] Check /clientaccesspolicy.xml
+* [ ] Check for Local Privacy Vulnerabilities
+
+
 
 ##  Test Transmission of Data Via the Client
 
@@ -131,6 +141,7 @@ POST, GET, WS?
 * [ ] Test if the controls are replicated on server-side
 * [ ] Looked for disabled content. `input disabled=true`
 * [ ] Test Browser Extension Components (flash, java-applet, etc)
+
 
 ----------------------------------------------------------------------------
 
@@ -198,6 +209,7 @@ Is the session managed though cookie, query id, or some hidden form?
 * [ ] Check for Disclosure of Tokens in Logs
 * [ ] Check Mapping of Tokens to Sessions
 * [ ] Check if session is terminated on the server side when a user logs out
+* [ ] Check when cookies expire, if it is in the future the session will be alive until it expires.
 
 ## Test for Session Fixation (OTG-SESS-003)
 * [ ] Check if sessionID is set before user is authenticated
@@ -215,10 +227,11 @@ id: 6.0
 
 * [ ] Check vertical access control - identify admin functions and resources. Check if non-admin can access them. (OTG-AUTHZ-003)
 * [ ] Check horizontal access control - try to reach resources from other user at same level.
+* [ ] Check if you can use token/cookie generated on one application in another (if testing various applications talking with the same api) 
 * [ ] Test for Insecure Access Control Methods
 * [ ] Testing for Insecure Direct Object References (OTG-AUTHZ-004)
 * [ ] Look out for control methods like access=read, edit=false.
-* [ ] Some access control is based on Referer. 
+* [ ] Some access control is based on Referer.
 * [ ] HEAD - Container managed access control
 
 ----------------------------------------------------------------------------
@@ -273,6 +286,34 @@ It is a good idea to use Burps fuzzing-list, but make sure to edit it before.
 # Client Side Testing
 
 * [ ] Testing for DOM based Cross Site Scripting (OTG-CLIENT-001)
+    * [ ] Identify the following APIs:
+```
+  document.location
+  document.URL
+  document.URLEncoded
+  document.referrer
+  window.location
+```
+    * [ ] Identify if any of the input data to above mentioned APIs are passed through the following functions:
+```
+  document.write()
+  document.writeln()
+  document.body.innerHtml
+  eval()
+  window.execScript()
+  window.setInterval()
+  window.setTimeout()
+```
+    * [ ] If the input data is passed through to any of the following functions it might be vulnerable to redirection attack:
+```
+  document.location
+  document.URL
+  document.open()
+  window.location.href
+  window.navigate()
+  window.open()
+```
+
 * [ ] Testing for JavaScript Execution (OTG-CLIENT-002)
 * [ ] Testing for HTML Injection (OTG-CLIENT-003)
 * [ ] Testing for Client Side URL Redirect (OTG-CLIENT-004)
@@ -283,7 +324,7 @@ It is a good idea to use Burps fuzzing-list, but make sure to edit it before.
 * [ ] Testing for Clickjacking (OTG-CLIENT-009)
 * [ ] Testing WebSockets (OTG-CLIENT-010)
 * [ ] Test Web Messaging (OTG-CLIENT-011)
-* [ ] Test Local Storage (OTG-CLI
+* [ ] Test Local Storage (OTG-CLIENT-012)
 
 
 # Test for Function-Specific Input Vulnerabilities
@@ -331,7 +372,7 @@ id: 10.0
 id: 11.0
 
 * [ ] Perform a port-scan of machine to identify administrative interface
-* [ ] If found, test default credentials.
+    * [ ] If found, test default credentials.
 * [ ] Test for Default Content
 * [ ] Scan with Nikto
 * [ ] Examine default content found
@@ -354,44 +395,8 @@ id: 11.0
 
 id: 12.0
 * [ ] Information disclose / Stack trace
-* [ ] Leaking sensitive information in referer header
-* [ ] Check for DOM-Based Attacks
-* [ ] Code review of every piece of JS received.
-* [ ] Identify the following APIs:
-  ~~~
-  document.location
-  document.URL
-  document.URLEncoded
-  document.referrer
-  window.location
-  ~~~
-* [ ] Identify if any of the input data to above mentioned APIs are passed through the following functions:
-  ~~~
-  document.write()
-  document.writeln()
-  document.body.innerHtml
-  eval()
-  window.execScript()
-  window.setInterval()
-  window.setTimeout()
-  ~~~
-* [ ] If the input data is passed through to any of the following functions it might be vulnerable to redirection attack:
-  ~~~
-  document.location
-  document.URL
-  document.open()
-  window.location.href
-  window.navigate()
-  window.open()
-  ~~~
-* [ ] Check for Local Privacy Vulnerabilities
-* [ ] Check when cookies expire, if it is in the future the session will be alive until it expires.
-* [ ] Check for presence of Headers:
-  Expires, Cache-control: no-cache, Pragma, HSTS
-* [ ] Check for Weak SSL Cipher
-* [ ] Check Same-Origin Policy Configuration
-* [ ] Check for /crossdomain.xml
-* [ ] Check /clientaccesspolicy.xml
+
+
 
 ----------------------------------------------------------------------------
 
