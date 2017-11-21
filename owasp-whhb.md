@@ -27,12 +27,12 @@ id: 1.2
 
 * [ ] Google
 
-``` 
-
+```
 site:target.com filetype:7z OR filetype:bin OR filetype:bzip2 OR 
 filetype:egg OR filetype:gzip OR filetype:rar OR filetype:zip OR 
 filetype:iso OR filetype:dat OR filetype:db OR filetype:sql OR 
 filetype:indd OR filetype:psd OR filetype:asc OR filetype:csv OR 
+
 filetype:docx OR filetype:doc OR filetype:epub 
     
 Google limit the number of letters in a query so we need to divide it up in several chunks
