@@ -205,8 +205,7 @@ id: 5
 
 * [ ] Understand the Session Mechanism
 
-Is the session managed though cookie, query id, or some hidden form?
-
+If cookie:
 * [ ] Identify which token is the session identification
 * [ ] Test Tokens for Meaning
 * [ ] Log in with several usernames and record the tokens recieved. Name the users stuff like A, AA, AAA, AAAAA, AAAAB
@@ -220,6 +219,13 @@ Is the session managed though cookie, query id, or some hidden form?
 * [ ] Check Mapping of Tokens to Sessions
 * [ ] Check if session is terminated on the server side when a user logs out
 * [ ] Check when cookies expire, if it is in the future the session will be alive until it expires.
+
+If JWT:
+See: https://www.sjoerdlangkemper.nl/2016/09/28/attacking-jwt-authentication/
+https://www.ticarpi.com/jwt-tool-attack-methods/
+* [ ] Test changing alg value to none/None - remove the signature but keep the dot
+* [ ] Test to change RS256 to HS256
+* [ ] Test for weak secret - brute force secret key
 
 ## Test for Session Fixation (OTG-SESS-003)
 * [ ] Check if sessionID is set before user is authenticated
