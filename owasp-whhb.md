@@ -74,6 +74,7 @@ Use burp extension t.ex.
 
 * [ ] Reverse DNS lookup
 * [ ] Brute force DNS (recon-ng, recon/domain-hosts/brute-hosts, set source, show hosts)
+* [ ] python sublist3r.py -d example.com
 * [ ] Zone-transfer test (fierce -dns target.com)
 
 ## Discover Default Content
