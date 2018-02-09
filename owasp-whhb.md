@@ -59,16 +59,7 @@ id: 1.3
 
 * [ ] Review comments and other client side code to find hidden content
 * [ ] Sample files, known files
-* [ ] Backups, git, other 
-    * [ ] .git/HEAD
-    * [ ] dump.sql
-    * [ ] index.php~
-    * [ ] index.php.swap
-    * [ ] #index.php#
-* TODO: find a list with common developer tool-things that expose stuff
-* subversion, bazaar, cvs, mercurial, perforce, editor-files
-
-Use burp extension t.ex.
+      - dirb https://www.address.blab -f -l -R -z 10 -o address.blab.txt
 
 ## Discover DNS
 
@@ -249,7 +240,7 @@ id: 6.0
 * [ ] Testing for Insecure Direct Object References (OTG-AUTHZ-004)
 * [ ] Look out for control methods like access=read, edit=false.
 * [ ] Some access control is based on Referer.
-* [ ] HEAD - Container managed access control
+* [ ] Test making get request that send data with HEAD/CATS method instead of GET.
 
 ----------------------------------------------------------------------------
 
