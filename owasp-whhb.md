@@ -170,6 +170,24 @@ id: 4.0
 * [ ] Test for Username Enumeration
 * [ ] Testing for default credentials (OTG-AUTHN-002) 
 
+### If Saml SSO
+* [ ] Identify Saml Response (Response from IDP to SP)
+* [ ] Test if message expiration is honored (<Saml:Condition NotBefore="2018-01-01T12:00")
+* [ ] Test if SP allows replay. SP should only allow response once. Test if you can send it multiple times.
+* [ ] Test if message contains a signature (it should)
+* [ ] Ensure certificate is signed by real and trusted CA (not self-signed)
+* [ ] If not signed by trusted CA, try cloning it.
+* [ ] Test SAML Response from different Recipient
+* [ ] Signature Wrapping attacks
+    * [ ] Test XSW1 – Applies to SAML Response messages. Add a cloned unsigned copy of the Response after the existing signature.
+    * [ ] Test XSW2 – Applies to SAML Response messages. Add a cloned unsigned copy of the Response before the existing signature.
+    * [ ] Test XSW3 – Applies to SAML Assertion messages. Add a cloned unsigned copy of the Assertion before the existing Assertion.
+    * [ ] Test XSW4 – Applies to SAML Assertion messages. Add a cloned unsigned copy of the Assertion after the existing Assertion.
+    * [ ] Test XSW5 – Applies to SAML Assertion messages. Change a value in the signed copy of the Assertion and adds a copy of the original Assertion with the signature removed at the end of the SAML message.
+    * [ ] Test XSW6 – Applies to SAML Assertion messages. Change a value in the signed copy of the Assertion and adds a copy of the original Assertion with the signature removed after the original signature.
+    * [ ] Test XSW7 – Applies to SAML Assertion messages. Add an “Extensions” block with a cloned unsigned assertion.
+    * [ ] Test XSW8 – Applies to SAML Assertion messages. Add an “Object” block containing a copy of the original assertion with the signature removed.
+* [ ] Test for XXE
 
 ## Test Registration Mechanism
 * [ ] Test Password Quality [[OTG-AUTHN-007]]
