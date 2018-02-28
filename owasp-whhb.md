@@ -171,6 +171,7 @@ id: 4.0
 * [ ] Testing for default credentials (OTG-AUTHN-002) 
 
 ### If Saml SSO
+https://blog.netspi.com/attacking-sso-common-saml-vulnerabilities-ways-find/
 * [ ] Identify Saml Response (Response from IDP to SP)
 * [ ] Test if message expiration is honored (<Saml:Condition NotBefore="2018-01-01T12:00")
 * [ ] Test if SP allows replay. SP should only allow response once. Test if you can send it multiple times.
@@ -187,6 +188,7 @@ id: 4.0
     * [ ] Test XSW6 – Applies to SAML Assertion messages. Change a value in the signed copy of the Assertion and adds a copy of the original Assertion with the signature removed after the original signature.
     * [ ] Test XSW7 – Applies to SAML Assertion messages. Add an “Extensions” block with a cloned unsigned assertion.
     * [ ] Test XSW8 – Applies to SAML Assertion messages. Add an “Object” block containing a copy of the original assertion with the signature removed.
+* [ ] Test for comment in <Subject> - https://duo.com/blog/duo-finds-saml-vulnerabilities-affecting-multiple-implementations
 * [ ] Test for XXE
 
 ## Test Registration Mechanism
