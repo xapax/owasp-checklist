@@ -439,4 +439,6 @@ http://sqlzoo.net
 
 https://github.com/Hack-with-Github/Awesome-Hacking/blob/master/README.md
 
+https://html5sec.org/
+
 ## Notes
