@@ -279,6 +279,7 @@ http://rextester.com/l/sql_server_online_compiler
 * [ ] Test for Reflected XSS (OTG-INPVAL-001)
     * [ ] Check for parameters. Burp/Analyze target/parameters
 * [ ] Test for HTTP Header Injection
+* [ ] Test for HOST-header manipulation (att two host headers, add X-Forwarded-Host) If you can, see: https://www.skeletonscribe.net/2013/05/practical-http-host-header-attacks.html
 * [ ] Test for Open Redirection
 * [ ] Test for Stored Attacks
 * [ ] Test for OS Command Injection
