@@ -64,6 +64,7 @@ id: 1.3
 ## Discover DNS
 
 * [ ] Reverse DNS lookup
+`dig -x 10.10.10.10`
 * [ ] Brute force DNS (recon-ng, recon/domain-hosts/brute-hosts, set source, show hosts)
 * [ ] python sublist3r.py -d example.com
 * [ ] Zone-transfer test (fierce -dns target.com)
