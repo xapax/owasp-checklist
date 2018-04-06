@@ -372,7 +372,8 @@ id 8.0
 * [ ] Test for LDAP Injection
 * [ ] Test for XPath Injection
 * [ ] Test for Back-End Request Injection
-* [ ] Test for XXE Injection
+* [ ] Test for XXE Injection (https://blog.netspi.com/playing-content-type-xxe-json-endpoints/)
+	* [ ] If JSON, change the content type to application/xml, and change the body to xml format, and follow the link above.
 
 ----------------------------------------------------------------------------
 
