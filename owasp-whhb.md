@@ -442,4 +442,6 @@ http://sqlzoo.net
 
 https://github.com/Hack-with-Github/Awesome-Hacking/blob/master/README.md
 
+Various Cloud service SSRF endpoints https://gist.github.com/BuffaloWill/fa96693af67e3a3dd3fb
+
 ## Notes
