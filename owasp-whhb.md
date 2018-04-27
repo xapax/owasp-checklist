@@ -53,13 +53,14 @@ filetype:tar OR filetype:rar OR filetype:tgz OR filetype:gz
 * [ ] https://netcraft.com/
 
 
-## Discover Hidden Content (use burp)
+## Discover Hidden Content
 
 id: 1.3
 
 * [ ] Review comments and other client side code to find hidden content
 * [ ] Sample files, known files
       - dirb https://www.address.blab -f -l -R -z 10 -o address.blab.txt
+* [ ] Use snallygaster to find sensitive files, https://github.com/hannob/snallygaster
 
 ## Discover DNS
 
