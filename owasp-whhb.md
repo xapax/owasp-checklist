@@ -53,17 +53,19 @@ filetype:tar OR filetype:rar OR filetype:tgz OR filetype:gz
 * [ ] https://netcraft.com/
 
 
-## Discover Hidden Content (use burp)
+## Discover Hidden Content
 
 id: 1.3
 
 * [ ] Review comments and other client side code to find hidden content
 * [ ] Sample files, known files
       - dirb https://www.address.blab -f -l -R -z 10 -o address.blab.txt
+* [ ] Use snallygaster to find sensitive files, https://github.com/hannob/snallygaster
 
 ## Discover DNS
 
 * [ ] Reverse DNS lookup
+`dig -x 10.10.10.10`
 * [ ] Brute force DNS (recon-ng, recon/domain-hosts/brute-hosts, set source, show hosts)
 * [ ] python sublist3r.py -d example.com
 * [ ] Zone-transfer test (fierce -dns target.com)
@@ -279,6 +281,7 @@ http://rextester.com/l/sql_server_online_compiler
 * [ ] Test for Reflected XSS (OTG-INPVAL-001)
     * [ ] Check for parameters. Burp/Analyze target/parameters
 * [ ] Test for HTTP Header Injection
+* [ ] Test for HOST-header manipulation (att two host headers, add X-Forwarded-Host) If you can, see: https://www.skeletonscribe.net/2013/05/practical-http-host-header-attacks.html
 * [ ] Test for Open Redirection
 * [ ] Test for Stored Attacks
 * [ ] Test for OS Command Injection
@@ -370,7 +373,8 @@ id 8.0
 * [ ] Test for LDAP Injection
 * [ ] Test for XPath Injection
 * [ ] Test for Back-End Request Injection
-* [ ] Test for XXE Injection
+* [ ] Test for XXE Injection (https://blog.netspi.com/playing-content-type-xxe-json-endpoints/)
+	* [ ] If JSON, change the content type to application/xml, and change the body to xml format, and follow the link above.
 
 ----------------------------------------------------------------------------
 
@@ -440,5 +444,9 @@ http://sqlzoo.net
 https://github.com/Hack-with-Github/Awesome-Hacking/blob/master/README.md
 
 https://html5sec.org/
+
+Various Cloud service SSRF endpoints https://gist.github.com/BuffaloWill/fa96693af67e3a3dd3fb
+
+https://github.com/bl4de/security_whitepapers
 
 ## Notes
