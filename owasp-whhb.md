@@ -75,7 +75,7 @@ id: 1.3
 id: 1.4
 
 * [ ] Run Nikto to discover default content
-* [ ] Testa köra direkt mot IP-addressen
+* [ ] Run it targeting the IP address directly
 
 ## Enumerate Identifier-Specified Functions
 
