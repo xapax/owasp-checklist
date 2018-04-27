@@ -444,4 +444,6 @@ https://github.com/Hack-with-Github/Awesome-Hacking/blob/master/README.md
 
 Various Cloud service SSRF endpoints https://gist.github.com/BuffaloWill/fa96693af67e3a3dd3fb
 
+https://github.com/bl4de/security_whitepapers
+
 ## Notes
