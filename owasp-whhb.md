@@ -442,4 +442,6 @@ http://sqlzoo.net
 
 https://github.com/Hack-with-Github/Awesome-Hacking/blob/master/README.md
 
+https://github.com/bl4de/security_whitepapers
+
 ## Notes
