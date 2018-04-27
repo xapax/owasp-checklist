@@ -443,6 +443,8 @@ http://sqlzoo.net
 
 https://github.com/Hack-with-Github/Awesome-Hacking/blob/master/README.md
 
+https://html5sec.org/
+
 Various Cloud service SSRF endpoints https://gist.github.com/BuffaloWill/fa96693af67e3a3dd3fb
 
 https://github.com/bl4de/security_whitepapers
