@@ -262,7 +262,7 @@ id: 6.0
 * [ ] Testing for Insecure Direct Object References (OTG-AUTHZ-004)
 * [ ] Look out for control methods like access=read, edit=false.
 * [ ] Some access control is based on Referer.
-* [ ] Test making get request that send data with HEAD/CATS method instead of GET.
+* [ ] Try crafting HTTP requests that send data with HEAD/CATS method instead of GET.
 
 ----------------------------------------------------------------------------
 
