@@ -32,7 +32,6 @@ site:target.com filetype:7z OR filetype:bin OR filetype:bzip2 OR
 filetype:egg OR filetype:gzip OR filetype:rar OR filetype:zip OR 
 filetype:iso OR filetype:dat OR filetype:db OR filetype:sql OR 
 filetype:indd OR filetype:psd OR filetype:asc OR filetype:csv OR 
-
 filetype:docx OR filetype:doc OR filetype:epub 
     
 Google limit the number of letters in a query so we need to divide it up in several chunks
@@ -60,7 +59,7 @@ id: 1.3
 * [ ] Review comments and other client side code to find hidden content
 * [ ] Sample files, known files
       - dirb https://www.address.blab -f -l -R -z 10 -o address.blab.txt
-* [ ] Use snallygaster to find sensitive files, https://github.com/hannob/snallygaster
+* [ ] Run it targeting the IP address directly
 
 ## Discover DNS
 
@@ -70,12 +69,6 @@ id: 1.3
 * [ ] python sublist3r.py -d example.com
 * [ ] Zone-transfer test (fierce -dns target.com)
 
-## Discover Default Content
-
-id: 1.4
-
-* [ ] Run Nikto to discover default content
-* [ ] Run it targeting the IP address directly
 
 ## Enumerate Identifier-Specified Functions
 
@@ -117,7 +110,6 @@ POST, GET, WS?
 
 * [ ] Identify the Technologies Used
 * [ ] Client side (cookies, scripts, java applets, flash)
-* [ ] Code review of every piece of JS received.
 * [ ] Server side (server, scripting lang, platform, backend components)
 * [ ] Map the Attack Surface
 * [ ] Acertain likely internal structure
@@ -135,6 +127,15 @@ POST, GET, WS?
 * [ ] Check /clientaccesspolicy.xml
 * [ ] Check for Local Privacy Vulnerabilities
 
+
+
+# Static analysis of JavaScript
+
+
+* [ ] Increase attack surface by looking for URL:s and domains
+* [ ] Sensitive information (Passwords, API keys, Storage etc)
+* [ ] Potentially dangerous areas in code(eval, dangerouslySetInnerHTML etc)
+* [ ] Components with known vulnerabilities (Outdated frameworks etc)
 
 
 ##  Test Transmission of Data Via the Client
@@ -424,6 +425,7 @@ id: 11.0
 * [ ] Test for Web Application Firewalling
 
 ----------------------------------------------------------------------------
+
 
 # Miscellaneous Checks
 
