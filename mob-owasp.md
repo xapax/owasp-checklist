@@ -56,8 +56,8 @@
 
 * [ ] Verify that data is encrypted on the network using TLS. The secure channel is used consistently throughout the app.
 * [ ] Verify that the app verifies the X.509 certificate of the remote endpoint when the secure channel is established. Only certificates signed by a valid CA are accepted.
-  - Generate self-signed certificate and and make burp use that.
-  
+  - [ ] Generate self-signed certificate and and make burp use that.
+  - [ ] Generate self-signed certificate with correct hostname, but from untrusted CA.
 * [ ] Verify that the app either uses its own certificate store, or pins the endpoint certificate or public key, and subsequently does not establish connections with endpoints that offer a different certificate or key, even if signed by a trusted CA.
 * [ ] Verify that the app doesn't rely on a single insecure communication channel (email or SMS) for critical operations, such as enrollments and account recovery.
 * [ ] Verify that the app only depends on up to date connectivity- and security libraries.
