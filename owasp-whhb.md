@@ -292,6 +292,7 @@ http://rextester.com/l/sql_server_online_compiler
 * [ ] Testing for HTTP Parameter pollution (OTG-INPVAL-004)
 * [ ] Testing for NoSQL injection
 * [ ] Testing for XML Injection (OTG-INPVAL-008)
+* [ ] If application is creating spreadsheet test for CSV injection
 
 ----------------------------------------------------------------------------
 
@@ -314,6 +315,9 @@ http://rextester.com/l/sql_server_online_compiler
 * [ ] Test Number of Times a Function Can be Used Limits (OTG-BUSLOGIC-005)
 * [ ] Testing for the Circumvention of Work Flows (OTG-BUSLOGIC-006)
 * [ ] Test Defenses Against Application Mis-use (OTG-BUSLOGIC-007)
+
+# Test file upload
+
 * [ ] Test Upload of Unexpected File Types (OTG-BUSLOGIC-008)
 * [ ] Test Upload of Malicious Files (OTG-BUSLOGIC-009)
 
