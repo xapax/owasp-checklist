@@ -191,6 +191,9 @@ https://blog.netspi.com/attacking-sso-common-saml-vulnerabilities-ways-find/
 * [ ] Test for Insecure Storage
 * [ ] Testing for Weak security question/answer (OTG-AUTHN-008)
 
+## Test two factor authentication (2fa)
+* [ ] Check 2fa
+
 ## Password reset mechanism
 * [ ] Testing for weak password change or reset functionalities (OTG-AUTHN-009)
 * [ ] Check if password reset token can be used several times
@@ -200,6 +203,7 @@ https://blog.netspi.com/attacking-sso-common-saml-vulnerabilities-ways-find/
 * [ ] Check that password reset token is of high entropy
 * [ ] Check that password reset token is unique, random
 * [ ] Check that lifespan of the password reset token (Max 24 hours)
+* [ ] Check that there is not link to external page where token is sent in referer header
 
 ## Other Tests
 * [ ] Test Any Remember Me/Password Function
