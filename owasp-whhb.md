@@ -196,6 +196,10 @@ https://blog.netspi.com/attacking-sso-common-saml-vulnerabilities-ways-find/
 * [ ] Check if password reset token can be used several times
 * [ ] Check if sessions are invalidated when password is reset
 * [ ] Check for user enumeration
+* [ ] Check that password is not sent in cleartext
+* [ ] Check that password reset token is of high entropy
+* [ ] Check that password reset token is unique, random
+* [ ] Check that lifespan of the password reset token (Max 24 hours)
 
 ## Other Tests
 * [ ] Test Any Remember Me/Password Function
