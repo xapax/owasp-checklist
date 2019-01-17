@@ -78,21 +78,6 @@ id: 1.5
       Example: /admin.jsp?action=editUser
 * [ ] Fuzz those for other actions
 
-## Test for Debug Parameters
-
-   id: 1.6
-
-* [ ] Test debug=true in URLs
-
-Use cluster-bomb attack in Burp
-
-```
-debug       true
-test        yes
-hide        1
-source      on
-```
-
 ----------------------------------------------------------------------------
 
 # Analyze the Application
@@ -206,10 +191,14 @@ https://blog.netspi.com/attacking-sso-common-saml-vulnerabilities-ways-find/
 * [ ] Test for Insecure Storage
 * [ ] Testing for Weak security question/answer (OTG-AUTHN-008)
 
+## Password reset mechanism
+* [ ] Testing for weak password change or reset functionalities (OTG-AUTHN-009)
+* [ ] Check if password reset token can be used several times
+* [ ] Check if sessions are invalidated when password is reset
+
 ## Other Tests
 * [ ] Test Any Remember Me/Password Function
 * [ ] Testing for Browser cache weakness (OTG-AUTHN-006)
-* [ ] Testing for weak password change or reset functionalities (OTG-AUTHN-009)
 * [ ] Testing for Weaker authentication in alternative channel (OTG-AUTHN-010)
 
 ----------------------------------------------------------------------------
@@ -436,7 +425,19 @@ id: 11.0
 id: 12.0
 * [ ] Information disclose / Stack trace
 
+## Test for Debug Parameters
 
+   id: 1.6
+
+* [ ] Test debug=true in URLs
+
+Use cluster-bomb attack in Burp
+
+```
+debug       true
+test        yes
+hide        1
+source      on
 
 ----------------------------------------------------------------------------
 
