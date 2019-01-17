@@ -195,6 +195,7 @@ https://blog.netspi.com/attacking-sso-common-saml-vulnerabilities-ways-find/
 * [ ] Testing for weak password change or reset functionalities (OTG-AUTHN-009)
 * [ ] Check if password reset token can be used several times
 * [ ] Check if sessions are invalidated when password is reset
+* [ ] Check for user enumeration
 
 ## Other Tests
 * [ ] Test Any Remember Me/Password Function
