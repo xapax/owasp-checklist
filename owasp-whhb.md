@@ -39,11 +39,13 @@ site:target.com filetype:html OR filetype:htm OR filetype:gdoc OR
 filetype:log OR filetype:md OR filetype:odt OR filetype:rtf OR
 filetype:odf OR filetype:php OR filetype:ods OR filetype:xls OR
 filetype:xlsx OR filetype:conf OR filetype:cnf OR filetype:cfg OR
-filetype:temp OR filetype:tmp OR filetype:pdf OR filetype:ppt OR
+filetype:temp OR filetype:tmp OR filetype:ppt OR
 filetype:txt
     
 site:target.com filetype:java OR filetype:bak OR filetype:old OR
 filetype:tar OR filetype:rar OR filetype:tgz OR filetype:gz
+
+site:target.com filetype:pdf
 ```
 
 * [ ] https://web.archive.org/
